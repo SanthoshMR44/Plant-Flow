@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased overflow-hidden h-screen w-screen;
+  }
+}
+
+/* React Flow custom styling */
+.react-flow__node {
+  border-radius: 8px;
+}
+
+/* Custom flow edge dash animations */
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.edge-flow-animated path.react-flow__edge-path {
+  stroke-dasharray: 5;
+  animation: flow-dash 1s linear infinite;
+}
+
+/* Hide default react flow attribution for premium clean UI */
+.react-flow__attribution {
+  display: none !important;
+}
+
+/* Modern scrollbar design for dashboards */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
